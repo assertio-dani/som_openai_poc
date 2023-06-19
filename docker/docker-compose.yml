@@ -1,0 +1,19 @@
+version: '3.6'
+
+services:
+
+  som_ai:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+      target: dev_image
+#    depends_on:
+#      - agency_office_db_dev
+    container_name: som_ai
+    restart: "no"
+    volumes:
+      - "..:/var/www"
+    working_dir: /var/www
+    # port used for debugging
+    ports:
+      - "8020:80"

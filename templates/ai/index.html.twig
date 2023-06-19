@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AiController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+    <h1>Hello {{ controller_name }}! ✅</h1>
+
+    <ul>
+        <li>Prompt: <code>{{ prompt }}</code></li>
+        <li>Response: <code>{{ ai_response }}</code></li>
+    </ul>
+
+    <ul>
+        <li>Your controller at <code><a href="{{ '/var/www/src/Controller/AiController.php'|file_link(0) }}">src/Controller/AiController.php</a></code></li>
+        <li>Your template at <code><a href="{{ '/var/www/templates/ai/index.html.twig'|file_link(0) }}">templates/ai/index.html.twig</a></code></li>
+    </ul>
+</div>
+{% endblock %}
